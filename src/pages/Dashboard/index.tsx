@@ -83,7 +83,7 @@ const Dashboard: FC<any> = () => {
           icon={iconPlus}
           loading={loading}
           onClick={onNewActivity}
-          data-cy="activity-add-button"
+          dataCy="activity-add-button"
         >
           Tambah
         </Button>

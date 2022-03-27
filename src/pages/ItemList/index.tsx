@@ -85,7 +85,7 @@ const ItemList: FC<any> = (props) => {
           icon={iconPlus}
           loading={loading}
           onClick={onNewToDo}
-          data-cy="todo-add-button"
+          dataCy="todo-add-button"
         >
           Tambah
         </Button>
