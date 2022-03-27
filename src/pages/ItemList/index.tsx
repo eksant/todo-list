@@ -81,7 +81,12 @@ const ItemList: FC<any> = (props) => {
     <div className="item-list">
       <div className="item-list-header">
         {!skeleton && <ToDoTitle onBackTo="/">{activity?.title}</ToDoTitle>}
-        <Button icon={iconPlus} loading={loading} onClick={onNewToDo}>
+        <Button
+          icon={iconPlus}
+          loading={loading}
+          onClick={onNewToDo}
+          data-cy="todo-add-button"
+        >
           Tambah
         </Button>
       </div>
