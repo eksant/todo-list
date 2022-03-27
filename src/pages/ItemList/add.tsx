@@ -11,7 +11,11 @@ interface Props {
 
 const AddItem: FC<Props> = ({ isOpen, onClose }) => {
   return (
-    <div className="add-item" style={{ display: isOpen ? 'block' : 'none' }}>
+    <div
+      data-cy="modal-add"
+      className="add-item"
+      style={{ display: isOpen ? 'block' : 'none' }}
+    >
       <div className="add-item-overlay" onClick={onClose} />
       <div className="add-item-modal">
         <div className="add-item-modal-header">
@@ -31,6 +35,7 @@ const AddItem: FC<Props> = ({ isOpen, onClose }) => {
                 className="form-control"
                 placeholder="Tambahkan nama Activity"
               />
+              <label data-cy="modal-add-priority-title">PRIORITY</label>
             </div>
           </div>
         </div>
