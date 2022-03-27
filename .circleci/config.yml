@@ -1,0 +1,24 @@
+version: 2.1
+jobs:
+  build-deploy:
+    docker:
+      - image: circleci/node:13.10
+    working_directory: ~/todo-seorangeksa
+    steps:
+      - run: sudo apt update && sudo apt install git rsync -y && git --version
+
+      - add_ssh_keys:
+          fingerprints: 
+            - 'd9:21:3d:c7:84:57:1a:65:01:e8:33:25:11:6f:17:e9'
+
+      - checkout
+      - run: npm cache clean --force && sudo rm -rf node_modules package-lock.json && yarn --version
+      - run: yarn install
+      - run: yarn build
+      - run: ssh-keyscan -H ${SSH_HOST} >> ~/.ssh/known_hosts
+      - run: rsync -avce ssh --delete ~/todo-seorangeksa/public/ ${SSH_ROOT}@${SSH_HOST}:/var/www/todo.seorangeksa.com
+
+workflows:
+  build:
+    jobs:
+      - build-deploy
