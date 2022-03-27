@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build-deploy:
     docker:
-      - image: circleci/node:14.15
+      - image: circleci/node:14.17
     working_directory: ~/todo-seorangeksa
     steps:
       - run: sudo apt update && sudo apt install git rsync -y && git --version
