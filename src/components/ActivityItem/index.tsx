@@ -15,7 +15,7 @@ interface Props {
 
 const ActivityItem: FC<Props> = ({ activity, onLinkTo, onDelete }) => {
   return (
-    <div className="activity-item">
+    <div className="activity-item" data-cy="activity-item">
       <Link to={onLinkTo}>
         <div className="activity-item-body">
           <div className="activity-item-title" data-cy="activity-item-title">

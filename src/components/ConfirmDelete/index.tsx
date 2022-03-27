@@ -8,6 +8,9 @@ import { ConfirmType } from '@/models';
 interface Props {
   name?: string;
   isOpen: boolean;
+  dataCy?: string;
+  dataCyCancel?: string;
+  dataCyDelete?: string;
   confirmType: ConfirmType;
   onClose?: () => void;
   onConfirm?: () => void;
@@ -16,12 +19,19 @@ interface Props {
 const ConfirmDelete: FC<Props> = ({
   name,
   isOpen,
+  dataCy,
   confirmType,
+  dataCyCancel,
+  dataCyDelete,
   onClose,
   onConfirm,
 }) => {
   return (
-    <div className="outer" style={{ display: isOpen ? 'block' : 'none' }}>
+    <div
+      data-cy={dataCy}
+      className="outer"
+      style={{ display: isOpen ? 'block' : 'none' }}
+    >
       <div className="overlay" onClick={onClose} />
       <div className="modal">
         <div className="modal-header">
@@ -34,15 +44,15 @@ const ConfirmDelete: FC<Props> = ({
         <div className="modal-footer">
           <Button
             onClick={onClose}
-            data-cy="modal-delete-cancel-button"
+            dataCy={dataCyCancel}
             className="modal-button btn-secondary"
           >
             Batal
           </Button>
           <Button
             onClick={onConfirm}
-            className="modal-button btn-danger"
-            data-cy="modal-delete-confirm-button"
+            className={dataCyDelete}
+            dataCy="modal-delete-confirm-button"
           >
             Hapus
           </Button>

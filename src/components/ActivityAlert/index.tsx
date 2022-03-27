@@ -9,7 +9,11 @@ interface Props {
 
 const ActivityAlert: FC<Props> = ({ isOpen, onClose }) => {
   return (
-    <div className="alert" style={{ display: isOpen ? 'block' : 'none' }}>
+    <div
+      className="alert"
+      data-cy="modal-information"
+      style={{ display: isOpen ? 'block' : 'none' }}
+    >
       <div className="alert-overlay" onClick={onClose} />
       <div className="alert-modal">
         <div className="alert-modal-body">

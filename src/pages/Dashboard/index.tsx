@@ -95,12 +95,8 @@ const Dashboard: FC<any> = () => {
         <ActivityEmpty />
       ) : (
         <div className="row">
-          {activities.map((activity: IActivity, idx: number) => (
-            <div
-              className="col"
-              key={activity.id}
-              data-cy={`activity-item-${idx}`}
-            >
+          {activities.map((activity: IActivity) => (
+            <div className="col" key={activity.id}>
               <ActivityItem
                 activity={activity}
                 onLinkTo={`/detail/${activity.id}`}
@@ -113,10 +109,13 @@ const Dashboard: FC<any> = () => {
 
       <ConfirmDelete
         isOpen={isOpen}
+        dataCy="modal-delete"
         name={activity?.title}
-        confirmType={ConfirmType.Activity}
         onClose={() => setIsOpen(false)}
         onConfirm={onConfirmDelActivity}
+        confirmType={ConfirmType.Activity}
+        dataCyCancel="modal-delete-cancel-button"
+        dataCyDelete="modal-delete-confirm-button"
       />
 
       <ActivityAlert isOpen={isSuccess} onClose={() => setIsSuccess(false)} />
