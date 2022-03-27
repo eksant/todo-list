@@ -1,0 +1,44 @@
+@import '@/assets/styles/vars.less';
+
+.todo {
+  display: flex;
+  align-items: center;
+
+  &-icon-back {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-right: 19px;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url('@/assets/images/icon-back.svg');
+  }
+
+  &-title {
+    // position: absolute;
+    // width: 233px;
+    height: 54px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+
+    /* identical to box height */
+    color: var(--bs-dark);
+  }
+
+  &-icon-edit {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 23px;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url('@/assets/images/icon-edit.svg');
+  }
+}

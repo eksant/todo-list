@@ -1,0 +1,13 @@
+import '@/components/ToDoEmpty/index.less';
+import imgToDoEmpty from '@/assets/images/todo-empty-state.svg';
+import { FC } from 'react';
+
+const ToDoEmpty: FC<any> = () => {
+  return (
+    <div className="todo-empty-state">
+      <img src={imgToDoEmpty} alt="todo-empty" />
+    </div>
+  );
+};
+
+export default ToDoEmpty;

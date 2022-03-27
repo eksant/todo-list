@@ -1,0 +1,49 @@
+@import '@/assets/styles/vars.less';
+
+body {
+  margin: 0;
+  background: var(--bs-body-bg);
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.col {
+  flex: 0 0 auto;
+  width: 23%;
+  padding: 0 20px 0 0;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.btn-primary {
+  background: #16abf8;
+  color: var(--bs-white);
+}
+
+.btn-secondary {
+  background: #f4f4f4;
+  color: #4a4a4a;
+}
+
+.btn-danger {
+  background: #ed4c5c;
+  color: var(--bs-white);
+}

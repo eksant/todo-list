@@ -1,0 +1,82 @@
+@import '@/assets/styles/vars.less';
+
+.activity-item {
+  position: relative;
+  // width: 235px;
+  height: 234px;
+  // left: 220px;
+  // top: 257px;
+
+  background: var(--bs-white);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-bottom: 26px;
+  padding: 22px 27px;
+
+  // height: 234px;
+  // background-color: #fff;
+  // border-radius: 12px;
+  // padding: 22px 27px;
+  // margin-bottom: 26px;
+  // position: relative;
+  // box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
+
+  &-body {
+    cursor: pointer;
+    height: 200px;
+  }
+
+  &-title {
+    // position: absolute;
+    // width: 182px;
+    // height: 27px;
+    // left: 247px;
+    // top: 279px;
+
+    // font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+    color: #111111;
+  }
+
+  &-footer {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    width: calc(100% - 54px);
+    padding: 0;
+    align-items: flex-end;
+
+    span {
+      color: #888;
+    }
+  }
+
+  &-delete {
+    cursor: pointer;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  a:active {
+    text-decoration: none;
+  }
+}
