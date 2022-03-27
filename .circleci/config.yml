@@ -9,7 +9,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints: 
-            - 'd9:21:3d:c7:84:57:1a:65:01:e8:33:25:11:6f:17:e9'
+            - 'cf:bc:41:e6:6c:f6:4d:21:1e:8a:48:33:4e:60:29:b6'
 
       - checkout
       - run: npm cache clean --force && sudo rm -rf node_modules package-lock.json && yarn --version
