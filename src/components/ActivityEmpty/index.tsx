@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 const ActivityEmpty: FC<any> = () => {
   return (
-    <div className="activity-empty" data-cy="activity-empty-state">
+    <div className="activity-empty" data-cy="activity-empty">
       <img src={imgActivityEmpty} alt="activity-empty" />
     </div>
   );

@@ -6,7 +6,7 @@ const Header: FC<any> = () => {
     <div className="header" data-cy="header-background">
       <div className="container">
         <div className="header-title" data-cy="header-title">
-          To Do List App
+          TO DO LIST APP
         </div>
       </div>
     </div>
