@@ -16,7 +16,12 @@ const ActivityAlert: FC<Props> = ({ isOpen, onClose }) => {
           <div className="alert-modal-icon">
             <img src={iconInformation} alt="information" />
           </div>
-          <div className="alert-modal-message">Activity berhasil dihapus</div>
+          <div
+            className="alert-modal-message"
+            data-cy="modal-information-title"
+          >
+            Activity berhasil dihapus
+          </div>
         </div>
       </div>
     </div>

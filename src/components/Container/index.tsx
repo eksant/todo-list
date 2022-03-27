@@ -1,4 +1,3 @@
-import '@/components/Container/index.less';
 import { FC } from 'react';
 
 const Container: FC<any> = ({ children }) => {

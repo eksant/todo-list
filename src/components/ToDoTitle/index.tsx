@@ -9,11 +9,13 @@ interface Props {
 const ToDoTitle: FC<Props> = ({ children, onBackTo }) => {
   return (
     <div className="todo">
-      <NavLink to={onBackTo}>
+      <NavLink to={onBackTo} data-cy="todo-back-button">
         <div className="todo-icon-back"></div>
       </NavLink>
-      <div className="todo-title">{children}</div>
-      <div className="todo-icon-edit"></div>
+      <div className="todo-title" data-cy="todo-title">
+        {children}
+      </div>
+      <div className="todo-icon-edit" data-cy="todo-title-edit-button"></div>
     </div>
   );
 };

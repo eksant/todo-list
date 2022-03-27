@@ -18,16 +18,21 @@ const ActivityItem: FC<Props> = ({ activity, onLinkTo, onDelete }) => {
     <div className="activity-item">
       <Link to={onLinkTo}>
         <div className="activity-item-body">
-          <div className="activity-item-title">{activity.title}</div>
+          <div className="activity-item-title" data-cy="activity-item-title">
+            {activity.title}
+          </div>
         </div>
       </Link>
       <div className="activity-item-footer">
-        <span>{moment(activity.created_at).format('DD MMMM YYYY')}</span>
+        <span data-cy="activity-item-date">
+          {moment(activity.created_at).format('DD MMMM YYYY')}
+        </span>
         <img
           alt="delete"
           src={iconDelete}
           className="activity-item-delete"
           onClick={() => onDelete(activity)}
+          data-cy="activity-item-delete-button"
         />
       </div>
     </div>

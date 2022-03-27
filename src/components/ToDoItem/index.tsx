@@ -13,7 +13,7 @@ interface Props {
 const ToDoItem: FC<Props> = ({ todo, onClick, onDelete }) => {
   return (
     <div className="todo-item">
-      <div className="todo-item-title">
+      <div className="todo-item-title" data-cy="todo-item-title">
         {todo.title}
         <div className="todo-icon-edit"></div>
       </div>
@@ -23,6 +23,7 @@ const ToDoItem: FC<Props> = ({ todo, onClick, onDelete }) => {
         src={iconDelete}
         className="todo-item-delete"
         onClick={() => onDelete(todo)}
+        data-cy="todo-item-delete-button"
       />
     </div>
   );

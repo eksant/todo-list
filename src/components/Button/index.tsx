@@ -14,14 +14,14 @@ const Button: FC<Props> = ({ icon, className, loading, onClick, children }) => {
     <button
       onClick={onClick}
       disabled={loading}
-      className={`activity-add-button btn-primary ${className}`}
+      className={`custom-button btn-primary ${className}`}
     >
       {loading ? (
         <Loading size={24} />
       ) : (
-        <div className="activity-add-button-title">
+        <div className="custom-button-title">
           {icon && (
-            <span className="activity-add-button-icon">
+            <span className="custom-button-icon">
               <img src={icon} alt="icon" />
             </span>
           )}

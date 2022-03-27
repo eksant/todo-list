@@ -7,3 +7,131 @@
     margin: 43px 10px 55px;
   }
 }
+
+.add-item {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  outline: 0;
+  z-index: 11;
+
+  &-overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-modal {
+    position: relative;
+    width: 830px;
+    height: 403px;
+    // padding: 24px 40px 19px 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    // margin: 40px auto;
+    border-radius: 12px;
+    z-index: 21;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: 0;
+
+    &-header {
+      display: flex;
+      flex-shrink: 0;
+      padding: 24px 30px;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #dee2e6;
+      border-top-left-radius: calc(0.3rem - 1px);
+      border-top-right-radius: calc(0.3rem - 1px);
+      // margin-bottom: 34px;
+
+      &-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #111111;
+      }
+
+      &-close {
+        cursor: pointer;
+      }
+    }
+
+    &-body {
+      position: relative;
+      flex: 1 1 auto;
+      padding: 38px 41px 38px 30px;
+      // font-style: normal;
+      // font-weight: 500;
+      // font-size: 18px;
+      // line-height: 150%;
+      // text-align: center;
+      // color: #111111;
+      // margin-bottom: 46px;
+
+      label {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 9px;
+        border-radius: 6px;
+      }
+
+      input {
+        margin: 0;
+        font-family: inherit;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: flex-end;
+      border: 0;
+    }
+
+    &-button {
+      margin: 0 10px;
+    }
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  height: 52px;
+  margin-bottom: 26px;
+}
+
+

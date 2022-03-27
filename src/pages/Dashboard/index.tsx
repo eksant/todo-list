@@ -79,7 +79,12 @@ const Dashboard: FC<any> = () => {
     <div className="dashboard">
       <div className="dashboard-header">
         <ActivityTitle>Activity</ActivityTitle>
-        <Button icon={iconPlus} loading={loading} onClick={onNewActivity}>
+        <Button
+          icon={iconPlus}
+          loading={loading}
+          onClick={onNewActivity}
+          data-cy="activity-add-button"
+        >
           Tambah
         </Button>
       </div>
@@ -90,8 +95,12 @@ const Dashboard: FC<any> = () => {
         <ActivityEmpty />
       ) : (
         <div className="row">
-          {activities.map((activity: IActivity) => (
-            <div key={activity.id} className="col">
+          {activities.map((activity: IActivity, idx: number) => (
+            <div
+              className="col"
+              key={activity.id}
+              data-cy={`activity-item-${idx}`}
+            >
               <ActivityItem
                 activity={activity}
                 onLinkTo={`/detail/${activity.id}`}
